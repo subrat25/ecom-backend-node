@@ -6,11 +6,8 @@ const bodyParser = require('body-parser');
 const userController = require('./src/controllers/userController');
 const userService = require('./src/services/userService');
 const authMiddleware = require('./src/middlewares/authMiddleware');
-// const swagger = require('./swagger');
 app.use(express.json());
 
-// swagger(app);
-// Authorization Endpoint
 app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -30,7 +27,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/users', userRoutes);
 
 const productRoutes = require('./routes/productRoutes');
-app.use('/products',authMiddleware.authenticateToken, productRoutes);
+app.use('/products', productRoutes);
 
 const cartRoutes = require('./routes/cartRoutes');
 app.use('/cart',authMiddleware.authenticateToken, cartRoutes);
