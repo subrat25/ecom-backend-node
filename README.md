@@ -58,6 +58,8 @@ create database dbname
 use dbname
 
 -- create users table
+
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -65,7 +67,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     role ENUM('customer', 'admin') NOT NULL DEFAULT 'customer'
 );
+
+
 -- create cart table
+
+
 CREATE TABLE cart (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -77,7 +83,11 @@ CREATE TABLE cart (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (item_id) REFERENCES products(id)
 );
+
+
 -- create products table
+
+
 CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -98,6 +108,8 @@ CREATE TABLE address (
 );
 
 -- create purchase table
+
+
 CREATE TABLE purchase (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
