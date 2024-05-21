@@ -1,4 +1,6 @@
 **E-commerce Backend**
+
+
 This project provides a backend service for an e-commerce platform, including user management, address management, shopping cart, and purchase processing functionalities. 
 It is built with Node.js, Express.js, and MySQL.
 
@@ -17,6 +19,8 @@ Clone the repository:
 
 
 git clone https://github.com/subrat25/ecom-backend-node.git
+
+
 Navigate to the project directory:
 
 
