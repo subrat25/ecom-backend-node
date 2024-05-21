@@ -30,12 +30,17 @@ Install the dependencies:
 **npm install**
 Create a .env file in the root of the project and add your database configuration and JWT secret:
 
-Copy code
+
 host=your_db_host
+
 user=your_db_user
+
 password=your_db_password
+
 database=your_db_name
+
 ACCESS_TOKEN_SECRET=your_jwt_secret
+
 
 
 Start the server:
